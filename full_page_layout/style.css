@@ -45,7 +45,7 @@ header nav a {
     align-items: center;
 }
 
-.banner p:nth-child(1) {
+.banner h1 {
     color: var(--main-white);
     font-size: 3.6rem;
     text-align: center;
@@ -235,7 +235,7 @@ footer a {
     .banner div {
         padding: 0px 20px;
     }
-    .banner p:nth-child(1) {
+    .banner h1 {
        font-size: 3rem;
     }
     .project div {
