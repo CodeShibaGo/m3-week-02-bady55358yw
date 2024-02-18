@@ -1,0 +1,259 @@
+@import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css");
+
+:root {
+    --main-red: #be3144;
+    --main-white: #f0f0f0;
+    --main-blue: #45567d;
+    --main-gray: #303841;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: var(--main-red);
+    position: fixed;
+    width: 100%;
+    box-shadow: 0 3px 10px 1px rgba(0, 0, 0, 0.3); /* x軸、y軸、模糊、擴散、顏色 */
+}
+
+header nav {
+    display: flex;
+    justify-content: flex-end;
+}
+
+header nav a {
+    color: var(--main-white);
+    padding: 1.2rem;
+    font-size: 1.2rem;
+}
+
+.banner {
+    background: linear-gradient(62deg, #3a3d40 0%, #181719 100%);
+    width: 100%;
+    height: 100vh;
+    font-family: 'Raleway', sans-serif;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner p:nth-child(1) {
+    color: var(--main-white);
+    font-size: 3.6rem;
+    text-align: center;
+    font-weight: 700;
+}
+
+.banner p:nth-child(2) {
+    color: var(--main-red);
+    font-size: 1.7rem;
+    text-align: center;
+    font-style: italic;
+    font-weight: 200;
+    margin-top: 20px;
+}
+
+.project {
+    background-color: var(--main-blue);
+    text-align: center;
+}
+
+.project > p {
+    color: var(--main-white);
+    font-size: 2.2rem;
+    border-bottom: 3px solid var(--main-white);
+    display: inline-block;
+    margin: 88px auto 64px auto;
+    padding-bottom: 20px;
+    font-weight: 700;
+}
+
+.project div {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(3, 1fr); /* 定義3列，每列寬度相等 */
+    grid-gap: 24px 40px; /* 列與列之間的間距 */
+    padding: 0px 32px;
+}
+
+.work {
+    display: grid;
+    box-shadow: 2px 2px 8px 1px rgba(0,0,0,0.3);
+}
+
+.work img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    min-height: 240px;
+}
+
+.work p {
+    font-size: 1.3rem;
+    background-color: var(--main-gray);
+    padding: 24px 0px;
+    color: var(--main-white);
+}
+
+.work p i {
+    color: var(--main-gray);
+    transition: color 0.5s;
+}
+
+.work p:hover i {
+    color: #ff7f50;
+}
+
+.project button {
+    color: var(--main-white);
+    background-color: var(--main-gray);
+    padding: 20px 28px;
+    font-size: 1rem;
+    border: none;
+    margin: 64px auto 88px auto;
+    transition: background-color 0.3s, margin-left 0.3s;
+}
+
+.project button i {
+    margin-left: 8px;
+}
+
+.project button:hover {
+    background-color: var(--main-red);
+}
+
+.project button:hover i {
+    margin-left: 10px;
+}
+
+.media {
+    color: white;
+    background-color: var(--main-gray);
+    width: 100%;
+    height: 100vh;
+    margin: auto;
+    text-align:center;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.media p:nth-child(1) {
+    font-size: 3.2rem;
+    font-weight: 800;
+}
+
+.media p:nth-child(2) {
+    font-size: 1.2rem;
+    font-style: italic;
+    font-weight: 200;
+    margin-top: 12px;
+}
+
+.contact-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 80px;
+}
+
+.contact-links a {
+    font-size: 1.3rem;
+    padding: 20px;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 1px #1f1f1f;
+    transition: transform 0.3s ease;
+}
+
+.contact-links a:hover {
+    transform: translateY(6px);
+}
+
+.contact-links a i {
+    margin-left: 10px;
+}
+
+footer {
+    border-top: 6px solid var(--main-red);
+    padding: 60px 42px;
+    background-color: var(--main-gray);
+    color: var(--main-white);
+    display: flex;
+}
+
+footer > p {
+    margin-right: 40px;
+}
+
+footer a {
+    color: var(--main-white);
+    cursor: pointer;
+}
+
+
+
+
+
+@media (max-width: 1200px) {
+    .project div {
+        grid-template-columns: repeat(2, 1fr); /* 定義2列，每列寬度相等 */
+        grid-gap: 24px 40px; /* 列與列之間的間距 */
+    }
+    .work img {
+        min-height: 280px;
+    }
+}
+
+@media (max-width: 768px) {
+    .project div {
+        grid-template-columns: repeat(1, 1fr); /* 定義3列，每列寬度相等 */
+        grid-gap: 64px 0px; /* 列與列之間的間距 */
+    }
+    .work img {
+        min-height: 360px;
+    }
+    .media {
+        padding: 80px 40px;
+        height: auto;
+    }
+    .project {
+        padding: 20px 32px;
+    }
+}
+
+@media (max-width: 576px) {
+    .banner div {
+        padding: 0px 20px;
+    }
+    .banner p:nth-child(1) {
+       font-size: 3rem;
+    }
+    .project div {
+        grid-template-columns: repeat(1, 70vw); /* 定義3列，每列寬度為螢幕的70% */
+    }
+    .media p:nth-child(1) {
+        font-size: 2.5rem;
+    }
+    .media p:nth-child(2) {
+        font-size: 1rem;
+    }
+
+    footer {
+        flex-wrap: wrap;
+    }
+
+    footer > p {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+}
