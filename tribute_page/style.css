@@ -1,0 +1,293 @@
+/* -- 初始設置 -- */
+
+* {
+    box-sizing: border-box;
+    /* 元素整體大小＝元素＋padding＋border */
+    margin: 0;
+}
+
+p,
+h3,
+ol,
+ul {
+    margin: 0;
+}
+
+/* -- flex對齊方式 -- */
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-left {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.flex-right {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+/* -- float對齊方式 -- */
+
+.float-left {
+    float: left;
+}
+
+.float-right {
+    float: right;
+}
+
+.clear-float {
+    clear: both;
+}
+
+/* -- margin對齊方式 -- */
+
+.margin-center {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* -- 文字樣式 -- */
+
+.f-bold {
+    font-weight: bold;
+}
+
+.f-bold-600 {
+    font-weight: 600;
+}
+
+.strikethrough {
+    text-decoration: line-through;
+}
+
+.no-break-word {
+    white-space: nowrap;
+}
+
+
+/* -- display呈現方式 -- */
+
+.inline-block {
+    display: inline-block;
+}
+
+.inline {
+    display: inline;
+}
+
+.flex {
+    display: flex;
+}
+
+/* -- 區塊樣式 -- */
+
+body {
+    background-color: #E0DFDA;
+}
+
+header {
+    font-size: 1.2rem;
+    padding: 8px 0px 14px 0px;
+}
+
+.year {
+    flex: 1;
+    letter-spacing: 42px;
+    transform: rotate(180deg);
+    font-size: 4.25rem;
+    writing-mode: vertical-rl;
+    opacity: 0.65;
+    font-family: cursive;
+}
+
+.pic_1 {
+    flex: 1.5;
+    width: 648px;
+    border-left: 2px solid black;
+    position: relative;
+}
+
+.pic_1 img {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+}
+
+.pic_1::after {
+    content: "Audrey\A Hepburn";
+    white-space: pre;
+    /* 保留換行符 */
+    position: absolute;
+    top: 50%;
+    left: 84%;
+    font-size: 4rem;
+}
+
+.empty {
+    flex: 1;
+}
+
+.name {
+    display: none;
+}
+
+.pic_2 {
+    width: 396px;
+}
+
+.pic_2 img {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+}
+
+.pic_2_backup {
+    display: none;
+}
+
+.content_1 {
+    display: flex;
+    align-items: center;
+}
+
+.content_1 h3 {
+    padding-left: 50px;
+    padding-top: 12px;
+    opacity: 0.8;
+    font-weight: 400;
+    font-size: 2.2rem;
+}
+
+.content_1 ol {
+    padding-left: 80px;
+}
+
+.content_1 li {
+    margin: 16px;
+    font-family: cursive;
+    opacity: 0.7;
+    font-size: 1.3rem;
+}
+
+section:nth-child(2) {
+    position: relative;
+}
+
+a {
+    text-decoration: none;
+    color: #851E0F;
+    cursor: pointer;
+    font-family: cursive;
+    font-size: 1rem;
+
+    position: absolute;
+    bottom: 24px;
+    right: 48px;
+}
+
+footer {
+    margin: 8px 0px 2px 0px;
+    color: #851E0F;
+    font-size: 0.75rem;
+}
+
+
+@media (max-width: 1200px) {
+    .content_1 h3 {
+        font-size: 1.5rem;
+    }
+    .content_1 li {
+        font-size: 1rem;
+    }
+}
+
+
+@media (max-width: 992px) {
+    .pic_1::after {
+        font-size: 3rem;
+    }
+
+    .year {
+        letter-spacing: 28px;
+        font-size: 2.8rem;
+    }
+
+    .content_1 h3 {
+        font-size: 1.2rem;
+    }
+
+    .content_1 li {
+        font-size: 0.8rem;
+    }
+
+    a {
+        bottom: 18px;
+        right: 18px;
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .pic_1::after {
+        font-size: 2.3rem;
+    }
+
+    .year {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .pic_1 {
+        border-left: none;
+        flex: 4;
+    }
+
+    .pic_1::after {
+        content: "";
+    }
+
+    .name {
+        display: block;
+        width: 100%;
+        font-size: 2rem;
+        text-align: center;
+        margin: 12px 0px;
+    }
+
+    main > div {
+        flex-wrap: wrap;
+    }
+
+    .content_1 {
+        justify-content: center;
+        padding: 30px;
+    }
+    .content_1 ol {
+        padding: 0;
+    }
+
+    .content_1 h3 {
+        padding: 0;
+        text-align: center;
+    }
+
+    .pic_2 {
+        display: none;
+    }
+
+    a {
+        position: static;
+        justify-content: center !important;
+    }
+
+}
